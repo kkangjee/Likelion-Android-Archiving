@@ -1,19 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+        android:id="@+id/layout_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+>
+    <LinearLayout
+            android:id="@+id/layout_top"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff">
+        <Button
+                android:id="@+id/layout_top_camera"
+                android:background="@drawable/ic_camera"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/layout_top_Instagram"
+                android:text="Instagram"
+                android:textSize="30dp"
+                android:fontFamily="cursive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <!--TV모양 버튼
+        <Button
+                android:text="TvImg"
+                android:background=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+                -->
+        <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+        <Button
+                android:id="@+id/layout_top_DM"
+                android:background="@drawable/ic_arrow"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
 
-    <TextView
-            android:layout_width="wrap_content"
+
+        />
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/layout_story"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/layout_story_image1"
+                android:background="@drawable/one"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+        <Button
+                android:id="@+id/layout_story_image2"
+                android:background="@drawable/two"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+        <Button
+                android:id="@+id/layout_story_image3"
+                android:background="@drawable/three"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+        <Button
+                android:id="@+id/layout_story_image4"
+                android:background="@drawable/four"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+        <Button
+                android:id="@+id/layout_story_image5"
+                android:background="@drawable/five"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/layout_middle"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:id="@+id/layout_middle_yourself"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/layout_middle_yourself_image"
+                    android:background="@drawable/simson"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"/>
+            <TextView
+                    android:id="@+id/layout_middle_yourself_name"
+                    android:text="name"
+                    android:textSize="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <View
+
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+            <Button
+                    android:id="@+id/layout_middle_yourself_menu"
+                    android:background="@drawable/ic_ellipses"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/layout_middle_mainimg"
+                android:text="Image"
+                android:background="@drawable/simson"
+                android:layout_width="match_parent"
+                android:layout_height="328dp"/>
+        <LinearLayout
+                android:id="@+id/layout_middle_choice"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/layout_middle_choice_like"
+                    android:background="@drawable/select_heart"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+            />
+            <Button
+                    android:id="@+id/layout_middle_choice_comment"
+                    android:background="@drawable/ic_speech_bubble"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+            <Button
+                    android:id="@+id/layout_middle_choice_DM"
+                    android:background="@drawable/ic_arrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+            <Button
+                    android:id="@+id/layout_middle_choice_share"
+                    android:background="@drawable/ic_description"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+        </LinearLayout>
+        <TextView
+                android:id="@+id/layout_middle_likes"
+                android:text="좋아요 x개"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/layout_middle_comment"
+                android:text="댓글 어쩌구"
+                android:textSize="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"></View>
+    <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-</android.support.constraint.ConstraintLayout>
+            android:background="#ffffff"
+    >
+        <Button
+                android:id="@+id/layout_bottom_home"
+                android:background="@drawable/ic_house"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+        <Button
+                android:id="@+id/layout_bottom_search"
+                android:background="@drawable/ic_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+        <Button
+                android:id="@+id/layout_bottom_upload"
+                android:background="@drawable/ic_instagram_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+        <Button
+                android:id="@+id/layout_bottom_log"
+                android:background="@drawable/ic_heart_outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"/>
+        <Button
+                android:id="@+id/layout_bottom_yourself"
+                android:background="@drawable/ic_display_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+</LinearLayout>
