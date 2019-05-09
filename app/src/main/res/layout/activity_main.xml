@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".MainActivity"
         android:background="#FFFFFF"
@@ -68,9 +68,10 @@
 
     </LinearLayout>
 
+
     <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="50dp"
                       android:orientation="vertical" android:id="@+id/ll_all_l3">
@@ -80,7 +81,7 @@
                     android:layout_height="50dp" android:id="@+id/ll_all_l3_l1">
                 <ImageButton
                         android:layout_width="25dp"
-                        android:layout_height="25dp" app:srcCompat="@drawable/hoony"
+                        android:layout_height="25dp" app:srcCompat="@drawable/home_myimg"
                         android:layout_weight="0" tools:layout_editor_absoluteY="29dp"
                         tools:layout_editor_absoluteX="10dp" tools:ignore="MissingConstraints"
                         android:layout_marginTop="10dp" android:id="@+id/ll_all_l3_l1_b1"/>
@@ -198,5 +199,33 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <View android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+
+    </View>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/home" android:id="@+id/imageView3"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/search2" android:id="@+id/imageView4"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/plus_image" android:id="@+id/imageView5"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/test" android:id="@+id/imageView6"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/home_myimg" android:id="@+id/imageView7"
+                android:layout_weight="1"/>
+    </LinearLayout>
 
 </LinearLayout>

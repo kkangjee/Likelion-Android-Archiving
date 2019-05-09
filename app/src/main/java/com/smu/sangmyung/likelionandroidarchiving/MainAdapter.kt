@@ -8,11 +8,11 @@ import android.view.ViewGroup
 class MainAdapter(fm:FragmentManager): FragmentStatePagerAdapter(fm) {//연결해줌
 override fun getItem(p0: Int): Fragment {
     return when(p0){//p는 포지션
-        0->AFregment()
+        0->AFragment()
         1->BFragment()
         2->CFragment()
 
-        else-> AFregment()
+        else-> AFragment()
     }
 }
 
