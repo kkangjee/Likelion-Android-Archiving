@@ -1,8 +1,10 @@
 package com.smu.sangmyung.likelionandroidarchiving
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.view.ViewPager
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import com.smu.sangmyung.likelionandroidarchiving.R.*
 
@@ -14,6 +16,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        imageView6.setOnClickListener {
+            val intent = Intent(this, RecordActivity::class.java)
+            startActivity(intent)
+        }
 
         vpMainActivity.adapter = MainActivity@ adapter       //메인 엑티비티에 어댑터 달기
 
@@ -30,6 +38,13 @@ class MainActivity : AppCompatActivity() {
                 //ciMainActivity.selectDot(p0)
             }
         })
+
+
+
+
+
+
+
 
         //ciMainActivity.createDotPanel(
           //  3, drawable.indicator_dot_off, drawable.indicator_dot_on, 0
